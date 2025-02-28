@@ -152,7 +152,7 @@ class ModelTrainServicerImpl(process_pb2_grpc.ProcessServicer):
             )
             raise e
 
-        except (TypeError, ValueError) as e:
+        except (TypeError, ValueError, KeyError, AttributeError) as e:
             log.warning(
                 {
                     "log_code": "<RUN490449039W>",
